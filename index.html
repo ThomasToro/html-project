@@ -9,20 +9,24 @@
     <!--icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
+    <!-- swiper css -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <title>Document</title>
 </head>
 <body>
 
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Curriculum</a>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a> <!--el # lo que hace no es llevarnos a otra page, buca el id home-->
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active">Inicio</a> <!--el # lo que hace no es llevarnos a otra page, buca el id home-->
+            <a href="#about">Antecedentes</a>
+            <a href="#services">Habilidades</a>
+            <a href="#portfolio">Intereses</a>
+            <a href="#testimonial">Idiomas</a>
         </nav>
 
         <div class="bx bx-moon" id="darkMode-icon"></div>
@@ -33,18 +37,33 @@
     <section class="home" id="home">
 
         <div class="home-content">
-            <h3>Hello, I am</h3>
+            <h3>Hola, yo soy</h3>
             <h1>Thomas Toro</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quos non sint consequatur voluptatem eius quis necessitatibus est quasi esse eligendi a, delectus, amet animi. Fuga fugit voluptatem vero iusto.</p>
+            <p>Soy un apasionado por la tecnología, el desarrolo de aplicaciones y actualmente soy estudiante de Ingeniería de Sistemas en Manizales, Colombia.</p>
 
             <div class="social-media">
-                <a href="#" > <i class='bx bxl-facebook-circle ' ></i></a>
-                <a href="#"> <i class='bx bxl-instagram'></i></a>
-                <a href="#"> <i class='bx bxl-linkedin-square' ></i></a>
+                <div>
+                    <a href="#" > <i class='bx bxl-facebook-circle ' ></i></a>
+                    <p>Thomas Toro</p>
+                </div>
+
+                <div>
+                    <a href="#"> <i class='bx bxl-instagram'></i></a>
+                    <p>@thomas_toroh</p>
+                </div>
+
+                <div>
+                    <a href="#"> <i class='bx bxl-linkedin-square' ></i></a>
+                    <p>Thomas Alejandro Toro Herrera</p>
+                </div>
+
+                <div>
                 <a href="#"> <i class='bx bxl-whatsapp-square' ></i></a>
+                <p>+57 310 643 0535</p>
+                </div>
+                
             </div>
 
-            <a href="#" class="btn">Download CV</a>
         </div>
 
         <div class="profession-container">
@@ -53,7 +72,7 @@
                 
                 <div class="profession" style="--i:0;">
                     <i class='bxr  bx-code'></i> 
-                    <h3>Web Developer</h3>
+                    <h3>Software Developer</h3>
                 </div>
 
                 <div class="profession" style="--i:1;">
@@ -76,62 +95,92 @@
             </div>
 
             <div class="overlay"></div>
+            <div class="home-img">
+                <img src="images/Gemini_Generated_Image_9dukas9dukas9duk-removebg-preview.png" alt="">
+            </div>
         </div>
 
-        <div class="home-img">
-            <img src="images/Gemini_Generated_Image_9dukas9dukas9duk-removebg-preview.png" alt="">
-        </div>
     </section>
 
     <!-- about section design   -->
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/Gemini_Generated_Image_9dukas9dukas9duk-removebg-preview.png" alt="">
+        <div class="about-certifications">
+            <h2 class="heading">Mis <span>Certificaciones</span> </h2>
+            <h3></h3>
+            <p></p>
+
+            <ul>
+                <li>Mención de honor de la Universidad Autónoma de Manizales por obtener un promedio superior o igual a 4.0, 2023 - 2024 - 2025.</li>
+                <li>Certificación en conocimientos académicos del inglés B2, Universidad Autónoma de Manizales - 2022.</li>
+                <li>Certificación de Coursera de Conocimientos en Desarrollo Frontend.</li>
+                
+            </ul>
         </div>
 
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span> </h2>
-            <h3>¡Hola, estoy aquí para ayudar con tu próximo proyecto!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis maiores neque. Voluptas, repellat at repellendus suscipit vero odio natus quaerat possimus assumenda eum maiores aperiam, optio eius dolor aliquam ipsa quidem cupiditate iste? A provident tempora totam molestias repellat?
+            <h2 class="heading">Mis Antecedentes <span>Académicos</span> </h2>
+            <h3></h3>
+            <p></p>
 
-            </p>
+            <ul>
+                <li>Universidad Autónoma de manizales Ingeniería de Sistemas - Sexto semestre, 2023 presente.</li>
+                <li>Seminario Menor de Nuestra Señora del Rosario, Título Bachiller Académico, Manizales, Colombia 2020 - 2022.</li>
+                <li>Escuela Normal Superior de Caldas 2013 - 2019.</li>
+                <li>Colegio Seminario Redentorista.</li>
+                
+            </ul>
 
-            <a href="#" class="btn">Más información</a>
         </div>
     </section>
 
     <!-- services section design  -->
     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
+        <h2 class="heading">Mis <span>Habilidades</span></h2>
 
         <div class="services-container">
 
             <div class="services-box">
                 <i class='bxr  bx-code'></i> 
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ratione est odio harum corporis soluta praesentium nulla nihil. Eum, cupiditate.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3>Desarrollo Web</h3>
+                <p>
+                    Html, Css, JavasCript, Angular y React.
+                </p>
+                
             </div>
 
 
         
 
             <div class="services-box">
-                <i class='bxr  bx-paint'    ></i>  
-                <h3>Graphic Desing</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ratione est odio harum corporis soluta praesentium nulla nihil. Eum, cupiditate.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class='bxr  bx-bracket-curly'    ></i>   
+                <h3>Backend </h3>
+                <p>Con Node.js, NestJS y Spring Boot.</p>
+                
             </div>
 
 
         
 
             <div class="services-box">
-                <i class='bxr  bx-chart-spline'    ></i>  
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ratione est odio harum corporis soluta praesentium nulla nihil. Eum, cupiditate.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class='bxr  bx-math'    ></i>   
+                <h3>Matemáticas</h3>
+                <p>Conocimientos en matemática y física avanzadas.</p>
+                
+            </div>
+
+            <div class="services-box">
+                <i class='bxr  bx-git-repo-forked'    ></i>   
+                <h3>Control de Versiones</h3>
+                <p>Dominio en herraminetas de control de versiones, Git y Github. </p>
+                
+            </div>
+
+            <div class="services-box">
+                <i class='bxr  bx-file-code'    ></i>  
+                <h3>Programación</h3>
+                <p>Conocimiento en lenguajes de programación Python, Java y C++. </p>
+                
             </div>
         </div>
 
@@ -139,16 +188,31 @@
 
     <!-- portfolio section design  -->
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
+        <h2 class="heading">Mis <span>Intereses</span></h2>
 
         <div class="portfolio-container">
+            
+
             <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
+                <img src="/images/programming.png" alt="">
 
 
                 <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
+                    <h4>Desarrollo de aplicaciones y programación web</h4>
+                    <p></p>
+                    <a href="#"><i class='bxr  bx-link'   ></i> </a>
+                </div>
+
+
+            </div>
+
+            <div class="portfolio-box">
+                <img src="/images/basketball.png" alt="">
+
+
+                <div class="portfolio-layer">
+                    <h4>Basketball</h4>
+                    <p></p>
                     <a href="#"><i class='bxr  bx-link'    ></i> </a>
                 </div>
 
@@ -156,12 +220,12 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
+                <img src="/images/mtb-collection.png" alt="">
 
 
                 <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
+                    <h4>Ciclismo de Montaña</h4>
+                    <p></p>
                     <a href="#"><i class='bxr  bx-link'    ></i> </a>
                 </div>
 
@@ -169,49 +233,10 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
-
-
+                <img src="/images/travelling.png" alt="">
                 <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
-                    <a href="#"><i class='bxr  bx-link'    ></i> </a>
-                </div>
-
-
-            </div>
-
-            <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
-
-
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
-                    <a href="#"><i class='bxr  bx-link'    ></i> </a>
-                </div>
-
-
-            </div>
-
-            <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
-
-
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
-                    <a href="#"><i class='bxr  bx-link'    ></i> </a>
-                </div>
-
-
-            </div>
-
-            <div class="portfolio-box">
-                <img src="/images/portfolio1.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam ut dolorem repudiandae nam rerum beatae odio veritatis totam itaque?</p>
+                    <h4>Conocer nuevos paises</h4>
+                    <p></p>
                     <a href="#"><i class='bxr  bx-link'    ></i> </a>
                 </div>
 
@@ -222,7 +247,49 @@
 
     </section>
 
-    <!-- script file link  --> 
+    <!-- teestimonial design  -->
+    <section class="testimonial" id="testimonial">
+        <div class="testimonial-container">
+
+        <h2 class="heading">Idiomas que<span> Hablo</span></h2>
+
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper" >
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="images/es.png" alt="">
+                        <h3>Español</h3>
+                        <p>Mi idioma <strong>nativo</strong>.</p>
+
+
+                    </div>
+
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="images/us_flag.png" alt="">
+                        <h3>Inglés</h3>
+                        <p>Idioma que estudio desde la primaria, con un nivel <strong>intermedio-avanzado</strong>.</p>
+
+
+                    </div>
+
+
+                    
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    
+    
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     
     <script src="script.js"></script>

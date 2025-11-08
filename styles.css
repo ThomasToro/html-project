@@ -20,7 +20,17 @@
 html{
     font-size: 62.5%; /*10px/16px = 62.5% para trabajar con rems mas facilmente*/
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+
 .header{
     position: fixed; /*Fija el header en la parte de arriba a peasar del scrolling*/
     top: 0;
@@ -33,6 +43,11 @@ html{
     z-index: 100;
     transition: .5s;
 
+}
+
+section {
+    padding: 8rem 7%;
+    min-height: 100vh;
 }
 
 .header.sticky {  /*Cuando se le añade la clase sticky al header (en el js)*/
@@ -98,38 +113,50 @@ html{
 }
 
 .home {
+    margin-top: -134px;  /*Compensa el padding del header fijo*/
+    margin-bottom: 0;
+    
+    position: relative; /*Esto hace que los absolutos dentro se posicionen respecto a home */
     display: flex;
     align-items: center;
-    margin: 15rem 0px 0px 15rem;
-    min-height: 92.6vh; /* 👈 Añade esta línea */
+    justify-content: space-between;
+    padding: 10rem; /* deja espacio arriba para el header fijo, top, left and rigth and bottom */ 
+    min-height: 100vh;
+    background: var(--bg-color);
+    overflow: hidden;
+    
+
 }
 
 
-.home .home-content{
-    
-    max-width: 44rem;
-
+.home .home-content {
+    margin-bottom: -190px;
+    max-width: 45rem;
+    z-index: 10;
 }
 
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
-    line-height: .3;
+    margin-bottom: 1rem;
 }
 
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 
 
 }
 
 .home-content p{
     font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 .home-content .social-media a{
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 4rem;
@@ -142,7 +169,26 @@ html{
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
+    
 
+}
+
+.home-content .social-media div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.home-content .social-media p{
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: .8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
 }
 
 .home-content .social-media a:hover{
@@ -172,7 +218,7 @@ html{
 
 .home .profession-container{
     position: absolute;
-    top: 50%;
+    top:50%;
     right: 0;
     transform: translateY(-50%);
     width: 768px;
@@ -191,6 +237,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .home .profession-box .profession{
@@ -198,6 +245,7 @@ html{
     left: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
@@ -223,7 +271,7 @@ html{
 }
 
 .home .profession h3{
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 600;
 }
@@ -249,11 +297,12 @@ html{
     border-left: 384px solid transparent;
 }
 
+
 .home-img img{
     position: absolute;
     bottom: 0;
-    right: 100px;
-    width: 35%;
+    right: 30px;
+    width: 55%;
     pointer-events: none; 
     
 }
@@ -262,44 +311,120 @@ span{
     color: var(--main-color);
 }
 
-.about{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:4rem;
-    min-height: 92.6vh; /* 👈 Añade esta línea */
-
-}
-
-.about-img img{
-    width: 20vw;
-
-}
-
 .heading{
     font-size: 4.5rem;
     text-align: center;
 }
 
-.about-content h2{
-    text-align: left;
-    line-height: 1.2;
+/**/
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    min-height: 100vh;
+    padding: 8rem 7%;
     
-} 
-
-.about-content h3{
-    font-size: 2rem;
-
+    position: relative;
+    overflow: hidden;
 }
 
-.about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+/* Añadimos una raya divisoria morada */
+.about::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 50%;
+    width: 2px;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+    opacity: 0.7;
 }
+
+/* Ambas mitades certificaciones y contenido */
+.about-certifications,
+.about-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+/* Estilos iguales para ambas secciones */
+.about-certifications h2,
+.about-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    }
+
+.about-certifications h2 span,
+.about-content h2 span {
+    color: var(--main-color); 
+}
+
+.about-certifications p,
+.about-content p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+/* Listas iguales */
+.about-certifications ul,
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.about-certifications ul li,
+.about-content ul li {
+    position: relative;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: #444;
+    padding-left: 3.5rem;
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.about-certifications ul li::before,
+.about-content ul li::before {
+content: "✔";
+position: absolute;
+left: 0;
+top: 0;
+color: var(--main-color);
+font-size: 2rem;
+line-height: 1.6;
+transition: transform 0.3s ease;
+}
+
+.about-certifications ul li:hover,
+.about-content ul li:hover {
+color: var(--main-color);
+transform: translateX(5px);
+}
+
+.about-certifications ul li:hover::before,
+.about-content ul li:hover::before {
+transform: scale(1.2);
+}
+
+
+
+
 
 .services{
-    min-height: 92.6vh; /* 👈 Añade esta línea */
-    padding-bottom: 7rem;
+    min-height: auto; 
+    padding: 8rem 7%;
+    
+    justify-items: center; /*centra horizontalmente cada box */
+    align-items: center;   /*centra verticalmente */
+
 }
 
 .services h2{
@@ -307,11 +432,20 @@ span{
 }
 
 .services .services-container{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+
+.services-container .services-box:last-child{
+    grid-column: span 2;
+    justify-self: center;
 }
 
 .services-container .services-box{
@@ -324,6 +458,7 @@ span{
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease;
+    
 }
 
 .services-container .services-box:hover{
@@ -356,9 +491,15 @@ span{
     margin: 1rem 0 3rem;
 }
 
+.services-box a{
+    margin-left: 0%;
+}
+
+
 .portfolio{
-    min-height: 92.6vh; /* 👈 Añade esta línea */
-    padding-bottom: 7rem;
+    min-height: 100vh; 
+    padding: 8rem 7% 12rem;
+    
 }
 
 .portfolio{
@@ -371,7 +512,7 @@ span{
 
 .portfolio .portfolio-container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -382,10 +523,13 @@ span{
     border-radius: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
     overflow: hidden;
+    height: 340px;
 }
 
 .portfolio-box img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: .5s ease;
 }
 
@@ -438,3 +582,91 @@ span{
     font-size: 2rem;
     color: #333;
 }
+
+.testimonial{
+    min-height: auto; 
+    padding: 8rem 7%;
+    
+}
+
+.testimonial-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem 1rem;
+    min-width: 92.6vh; 
+}
+
+.testimonial-container .testimonial-wrapper{
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+    padding: 5rem;
+}
+
+.testimonial-wrapper .testimonial-box{
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+
+}
+.testimonial-container .testimonial-slide{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 .1rem 5rem var(--shadow-color);
+    padding: 3rem 5rem;
+    border-top: .8rem solid var(--main-color);
+    border-bottom: .8rem solid var(--main-color);
+
+    height: auto;
+}
+
+.testimonial-slide img{
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .5rem solid var(--bg-color);
+    outline: .5rem solid var(--main-color);
+}
+
+.testimonial-slide h3{
+    font-size: 2.4rem;
+    margin: 2rem 0;
+}
+
+.testimonial-slide p{
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.testimonial-box .swiper-button-next,
+.testimonial-box .swiper-button-prev{
+    color:var(--main-color);
+}
+
+.testimonial-box .swiper-button-next{
+    right: 0;
+}
+
+.testimonial-box .swiper-button-prev{
+    left: 0;
+}
+
+
+.testimonial-box .swiper-pagination-bullet{
+    background: rgba(0, 0, 0, .8);
+}
+
+.testimonial-box .swiper-pagination-bullet-active{
+    background: var(--main-color);
+}
+
+section + section {
+  margin-top: 4rem; /* separa visualmente entre secciones */
+}
+
