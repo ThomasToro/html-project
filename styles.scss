@@ -1,4 +1,3 @@
-/* --- Reseteo Básico --- */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@
     scroll-behavior: smooth;
 }
 
-/* --- Variables (Se quedan igual) --- */
 :root {
     --bg-color: #fdfdfd;
     --text-color: #333;
@@ -18,23 +16,18 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
-// -------------------------------------
-// --- ¡AQUÍ COMIENZAN LOS MIXINS! ---
-// -------------------------------------
 
-// Mixin para centrar con Flexbox
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-// Mixin para transiciones (con un parámetro opcional)
 @mixin transition-ease($time: 0.5s) {
     transition: $time ease;
 }
 
-// Mixin para la superposición de portfolio
 @mixin portfolio-overlay {
     position: absolute;
     bottom: 0;
@@ -89,11 +82,11 @@ body {
     z-index: 100;
     @include transition-ease(); 
 
-    &.sticky { // <-- Anidación
+    &.sticky { 
         background: var(--bg-color);
         box-shadow: 0 .1rem 1rem var(--shadow-color);
 
-        .navbar a { // <-- Anidación profunda
+        .navbar a { 
             color: var(--text-color);
 
             &.active {
@@ -133,7 +126,7 @@ section {
     font-weight: 500;
     margin-right: 3.5rem;
 
-    &.active::before { // <-- Anidación con '&'
+    &.active::before { 
         content: '';
         position: absolute;
         left: 0;
@@ -354,7 +347,7 @@ span {
         opacity: 0.7;
     }
 
-    // Ahorramos código aplicando estilos a ambas clases a la vez
+    
     .about-certifications,
     .about-content {
         flex: 1;
@@ -718,12 +711,10 @@ section + section {
         justify-self: auto;
     }
 
-    /* --- Sección Portfolio (1 Columna) --- */
     .portfolio .portfolio-container {
         grid-template-columns: 1fr; 
     }
 
-    /* --- Sección Testimonial --- */
     .testimonial-container {
         min-width: 100%; 
     }

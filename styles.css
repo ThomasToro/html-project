@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* --- Reseteo Básico --- */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@
   scroll-behavior: smooth;
 }
 
-/* --- Variables (Se quedan igual) --- */
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
@@ -631,14 +629,8 @@ section + section {
     grid-column: span 1;
     justify-self: auto;
   }
-  .navbar a::before {
-    /* --- Sección Portfolio (1 Columna) --- */
-  }
   .navbar a::before .portfolio .portfolio-container {
     grid-template-columns: 1fr;
-  }
-  .navbar a::before {
-    /* --- Sección Testimonial --- */
   }
   .navbar a::before .testimonial-container {
     min-width: 100%;
